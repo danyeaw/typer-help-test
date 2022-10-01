@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Dan Yeaw <dan@yeaw.me>"]
 readme = "README.md"
-packages = [{include = "typer_help_test"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
