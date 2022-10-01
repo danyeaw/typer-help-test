@@ -1,11 +1,12 @@
 from typing import Optional
 
-import typer
-
-app = typer.Typer()
+import rich_click as click
 
 
-@app.command()
+
+@click.command()
+@click.argument("name")
+@click.option("--city")
 def main(name: str, city: Optional[str] = None):
     print(f"Hello {name}")
     if city:
@@ -13,4 +14,4 @@ def main(name: str, city: Optional[str] = None):
 
 
 if __name__ == "__main__":
-    app()
+    main()
