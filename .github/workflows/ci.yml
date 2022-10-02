@@ -33,5 +33,7 @@ jobs:
         run: poetry config virtualenvs.in-project true
       - name: Install Python Dependencies
         run: poetry install
+      - name: Diagnose Rich
+        run: poetry run python -m rich.diagnose
       - name: Test
         run: poetry run pytest
